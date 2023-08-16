@@ -38,12 +38,11 @@ const Signin = () => {
     login(loginData)
       .then((res: AxiosResponse) => {
         dispatch(authSuccess(res?.data));
-        router.replace(ROUTES.default);
+        router.replace(ROUTES.post);
         toast.success("Admin Login Successfully");
       })
       .catch((err) => {
-        console.log("err: ", err);
-        toast.error("Admin Login Successfully");
+        toast.error(err);
       });
   };
 

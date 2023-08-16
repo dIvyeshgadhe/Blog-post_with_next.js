@@ -20,8 +20,6 @@ const loginSlice = createSlice({
   initialState: initialState,
   reducers: {
     authSuccess: (state, action) => {
-      console.log("action: ", action);
-
       setCookie(CK_USER, JSON.stringify(action.payload));
       state.isLoggedIn = true;
       state.userData = action.payload;

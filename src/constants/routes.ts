@@ -1,7 +1,8 @@
 export const ROUTES = {
   // Open Routes
-  default: `/post`,
-  signin: `signin`,
+  default: `/`,
+  signin: `/signin`,
+  post: "/post",
 };
 
 export const META_TAGS = {
@@ -10,3 +11,5 @@ export const META_TAGS = {
     description: "Welcome to drop shopee",
   },
 };
+
+export const routessWithoutHeaderFooter = [ROUTES.signin, ROUTES.default];

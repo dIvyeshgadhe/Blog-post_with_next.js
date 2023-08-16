@@ -22,7 +22,6 @@ export function api(header: IApiHeaders = {}) {
       "Content-Type": "application/json",
     },
   });
-  console.log("API_BASE: ", API_BASE);
   if (header?.token) {
     axiosClient.defaults.headers.common["Authorization"] = header?.token;
   }
@@ -39,7 +38,7 @@ export function api(header: IApiHeaders = {}) {
   );
   axiosClient.interceptors.response.use(
     (response: AxiosResponse) => {
-      console.log("Here...", response);
+      // console.log("Here...", response);
       // if (response.data) {
       //   toast.dismiss();
       //   const successResponse = response.data as ISuccessResponse;

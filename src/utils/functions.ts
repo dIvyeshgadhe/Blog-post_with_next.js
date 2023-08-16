@@ -1,5 +1,6 @@
 "use client";
 import { CK_USER } from "@/constants";
+import { routessWithoutHeaderFooter } from "@/constants/routes";
 import { getCookie } from "@/service/cookie";
 import { authFail, authSuccess } from "@/service/redux/slices/AuthSlice";
 import axios from "axios";
@@ -7,7 +8,6 @@ import { Store } from "redux";
 
 // Fun used for setting up the common header for axios through out the app and rehydrate the redux store
 export const setupAxios = async (store: Store) => {
-  console.log("setup axios called");
   try {
     if (typeof document !== undefined && getCookie(CK_USER)) {
       const userData = JSON.parse(getCookie(CK_USER) || "");
@@ -26,4 +26,5 @@ export const setupAxios = async (store: Store) => {
   }
 };
 
-export const toCheckAuthPage = (path: string) => !path.includes("/signin");
+export const toCheckAuthPage = (path: string) =>
+  !routessWithoutHeaderFooter.includes(path);
