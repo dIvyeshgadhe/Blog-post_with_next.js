@@ -1,0 +1,150 @@
+// Fonts Size
+h1 {
+    font-size: 45px;
+}
+h2 {
+    font-size: 25px;
+    .big {
+        font-size: 45px;
+    }
+}
+h3{
+    font-size: 22px;
+    line-height: 28px;
+}
+h4 {
+    font-size: 18px;
+}
+h5 {
+    font-size: 16px;
+}
+p {
+    font-size: 16px;
+    &.small {
+        font-size: 14px;
+    }
+}
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+.text-success {
+    color: $success;
+}
+
+.text-danger {
+    color: $danger;
+}
+
+.text-warning {
+    color: $warning;
+}
+.text-info {
+    color: $info;
+}
+.text-darkred {
+    color: $color2;
+}
+.text-capitalize{
+    text-transform: capitalize;
+}
+.bg-facebook{
+    background-color: #385C8E;
+}
+.bg-twitter{
+    background-color: #03A9F4;
+}
+
+.position-relative {
+    position: relative;
+}
+// Font Family
+
+
+// Width css
+.w-100 {
+	width: 100% !important;
+}
+
+// Height SCSS
+.min-h100 {
+	min-height: 100vh;
+}
+.h-100 {
+    height: 100%;
+}
+.mr-20{
+    margin-right: 20px;
+}
+.mb-25 {
+    margin-bottom: 25px;
+}
+.mt-30{
+    margin-top: 30px;
+}
+.mr-50 {
+	margin-right: 50px;
+}
+.container {
+    width: 1140px;
+    max-width: 100%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin: 0 auto;
+
+    &.lg {
+        width: 1232px;
+    }
+    &.md {
+        width: 908px;
+    }
+}
+.pr-5 {
+	padding-right: 5px;
+}
+
+// Responsive
+@include responsive(md) {
+    // Fonts Size
+    h1 {
+        font-size: 30px;
+    }
+    h2 {
+        font-size: 22px;
+        &.big {
+            font-size: 28px;
+        }
+    }
+    h3{
+        font-size: 19px;
+    }
+    h4 {
+        font-size: 17px;
+    }
+    h5 {
+        font-size: 15px;
+    }
+    p {
+        font-size: 15px;
+        &.small {
+            font-size: 13px;
+        }
+    }
+    body {
+        font-size: 15px;
+    }
+}
+
+@include responsive(xs) {
+    p {
+        font-size: 14px;
+        &.small {
+            font-size: 13px;
+        }
+    }
+}
+
+

@@ -1,0 +1,25 @@
+.formGroup {
+  margin-bottom: 30px;
+  label {
+    color: #1a1a1a;
+    font-family: var(--nunito_sans-font);
+    font-size: 14px;
+    font-weight: 400;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .formInput {
+    border-radius: 100px;
+    border: 1px solid #1a1a1a;
+    width: 100%;
+    min-height: 50px;
+    padding: 10px 20px;
+    color: #1a1a1a !important;
+    font-family: var(--nunito_sans-font);
+    font-size: 16px;
+    font-weight: 400;
+  }
+}
+.error {
+  color: red;
+}

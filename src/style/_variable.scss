@@ -1,0 +1,59 @@
+@import "mixin";
+
+// Color Variable
+$white: #ffffff;
+$black: #000000;
+
+// Gray
+$color1: #444A4D;
+$color2: #E51E25;
+$color3: #F8F8F8;
+$color4: #B2B2B2;
+
+$success: #089B55;
+$danger: #E5664B;
+$warning: #E5B64B;
+$info: #448FB8;
+
+// media quary
+$lg: 1140px;
+$md: 992px;
+$sm: 767px;
+$xs: 575px;
+
+
+%font-regular {
+    font-weight: 400;
+}
+
+%font-medium {
+    font-weight: 500;
+}
+
+%font-semibold {
+    font-weight: 600;
+}
+
+%font-bold {
+    font-weight: 700;
+}
+
+%font-Extrabold {
+    font-weight: 900;
+}
+
+%box-shadow {
+    @include prefix (box-shadow, 0px 3px 6px #00000029);
+}
+
+%r-5 {
+    @include prefix (border-radius, 5px);
+}
+
+%r-50 {
+    @include prefix (border-radius, 50px);
+}
+
+%r-10 {
+    @include prefix (border-radius, 10px);
+}

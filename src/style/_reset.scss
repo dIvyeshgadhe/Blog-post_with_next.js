@@ -1,0 +1,169 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    border: none;
+    outline: none;
+    @include prefix (box-sizing, border-box);
+    -webkit-tap-highlight-color: transparent;
+}
+
+html {
+    @include prefix (text-size-adjust, none);
+}
+
+body {
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    color: $black;
+    // font-family: 'Catamaran', sans-serif;
+}
+
+img {
+    max-width: 100%;
+    vertical-align: middle;
+    display: inline-block;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover,
+    &:focus {
+        @extend a;
+    }
+}
+
+button {
+    outline: 0;
+
+    &:hover,
+    &:focus {
+        @extend button;
+    }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+strong,
+b {
+    margin: 0;
+    font-weight: normal;
+    line-height: normal;
+    letter-spacing: 1px;
+
+}
+
+.text-white {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b,
+    p,
+    ul,
+    ol,
+    li {
+        color: $white;
+    }
+}
+
+.text-gray {
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b,
+    p,
+    ul,
+    ol,
+    li,
+    .timer {
+        color: $color1;
+    }
+}
+
+p {
+    margin: 0;
+    line-height: normal;
+
+}
+
+strong {
+    @extend %font-bold;
+}
+
+ul,
+ol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+svg {
+    fill: currentColor;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+div,
+aside,
+figure,
+figcaption,
+label {
+    margin: 0;
+}
+
+%transition {
+    @include prefix(transition, all 0.3s ease-in-out);
+}
+
+input,
+textarea,
+select,
+header {
+    @include prefix (appearance, none);
+    font-family: "Catamaran", sans-serif;
+}
+
+::-moz-selection {
+    background: $color2;
+    color: $white;
+}
+
+::selection {
+    background: $color2;
+    color: $white;
+}
+
+::-webkit-input-placeholder {
+    color: $black;
+    opacity: 0.5;
+}
+
+:-moz-placeholder {
+    color: $black;
+    opacity: 0.5;
+}
+
+::-moz-placeholder {
+    color: $black;
+    opacity: 0.5;
+}
+
+:-ms-input-placeholder {
+    color: $black;
+    opacity: 0.5;
+}
