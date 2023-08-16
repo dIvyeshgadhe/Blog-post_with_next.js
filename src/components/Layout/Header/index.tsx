@@ -4,6 +4,7 @@ import { authFail } from "@/service/redux/slices/AuthSlice";
 import { useDispatch } from "react-redux";
 import { ROUTES } from "@/constants/routes";
 import { useRouter } from "next/router";
+import Link from "next/link";
 
 const Header = () => {
   const dispatch = useDispatch();
@@ -13,15 +14,21 @@ const Header = () => {
       <nav>
         <ul>
           <li>
-            <a href="/post">Home</a>
+            <Link href="/post" className={styles.link}>
+              Home
+            </Link>
           </li>
 
           <li>
-            <a href="/postwithserver">Post_Serverside</a>
+            <Link href="/postwithserver" className={styles.link}>
+              Post_Serverside
+            </Link>
           </li>
 
           <li>
-            <a href="/postwithISR">Post_ISR</a>
+            <Link href="/postwithISR" className={styles.link}>
+              Post_ISR
+            </Link>
           </li>
         </ul>
       </nav>
