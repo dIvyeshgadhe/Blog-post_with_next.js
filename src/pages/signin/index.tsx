@@ -55,8 +55,9 @@ const Signin = () => {
         toast.success("Admin Login Successfully");
       })
       .catch((err) => {
+        console.log("err: ", err);
         // Displaying an error toast if login fails
-        toast.error(err);
+        toast.error(err.response.data.message);
       });
   };
 
